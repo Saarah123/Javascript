@@ -12,12 +12,14 @@ console.log(find(number));
 
 //REDUCE : It accepts two arguments & this  method is used to apply a function to each element of an array and reduce it to a single value. 
 
-const number1 = [1,5,7,8,10]
+const number1 = [1,2,3,4,5]
 
 function reduce(array){
-    const reduced = array.reduce((accumalator,currValur)=>accumalator + currValur,0 )
+    const reduced = array.reduce((accumalator,currValur)=> accumalator + currValur,3 )
     return reduced;
 }
+
+// 3 => is the initial value of accumalator , its not the index
 
 
 console.log(reduce(number1));
@@ -33,3 +35,27 @@ function multipleOfFive(array){
 }
 
 console.log(multipleOfFive(number2));
+
+
+// FILTER : it filter outs the elements accdng to the conditions passed in the method 
+
+const number3 = [2, 4, 6 ,8, 34, 21, 77 , 35,14]
+
+function filtersOut(array){
+    const filtered = array.filter((val) => val % 7 === 0)
+    return filtered ;
+}
+
+console.log(filtersOut(number3));
+
+
+//COPYWITHIN() : It copies the part of the given array with its own elements and returns the modified array. 
+
+const array = ["yellow","red", 3 ,  7, "black"]
+
+function copy(arr,target,start,end){
+    const copies = arr.copyWithin(target,start,end)
+    return copies;
+}
+
+console.log(copy(array,0,1));
